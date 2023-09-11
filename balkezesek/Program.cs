@@ -43,6 +43,17 @@ namespace balkezesek
 
                 balkezesek.Add(new Balkezesek(nev, elso, utolso, suly, magassag));
             }
+
+            //3.feladat
+            Console.WriteLine($"3.feladat: {balkezesek.Count}");
+
+            //4.feladat
+            Console.WriteLine("\n4.feladat");
+            List<Balkezesek> in99 = balkezesek.FindAll(x => x.Utolso == 1999);
+            foreach (Balkezesek item in in99)
+            {
+                Console.WriteLine($"{item.Nev}, {item.Magassag * 2.54}cm");
+            }
         }
     }
 }
