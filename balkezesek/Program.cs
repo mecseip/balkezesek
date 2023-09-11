@@ -64,6 +64,17 @@ namespace balkezesek
                 Console.Write("Hibás adat,kérek egy 1990 és 1999 közötti évszámot!: ");
                 evszam = int.Parse(Console.ReadLine());
             }
+
+            //6.feladat
+            List<Balkezesek> playersInEvszam = balkezesek.FindAll(x => x.Elso <= evszam && x.Utolso >= evszam);
+            double atlagSuly = 0;
+            foreach (Balkezesek item in playersInEvszam)
+            {
+                atlagSuly += item.Suly;
+            }
+            Console.WriteLine($"\n6.feladat: {Math.Round(atlagSuly / playersInEvszam.Count, 2)} font");
+
+            Console.ReadLine();
         }
     }
 }
