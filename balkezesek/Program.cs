@@ -54,6 +54,16 @@ namespace balkezesek
             {
                 Console.WriteLine($"{item.Nev}, {item.Magassag * 2.54}cm");
             }
+
+            //5.feladat
+            Console.WriteLine("\n5.feladat");
+            Console.Write("Kérek egy 1990 és 1999 közötti évszámot!: ");
+            int evszam = int.Parse(Console.ReadLine());
+            while (!(1990 <= evszam && evszam <= 1999))
+            {
+                Console.Write("Hibás adat,kérek egy 1990 és 1999 közötti évszámot!: ");
+                evszam = int.Parse(Console.ReadLine());
+            }
         }
     }
 }
